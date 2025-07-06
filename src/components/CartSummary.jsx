@@ -11,7 +11,7 @@ const CartSummary = () => {
   const total = subtotal + tax;
 
   return (
-    <div className="bg-light-gray p-7">
+    <div className="bg-light-gray p-5 md:p-7">
       <div>
         {
           cart.items.map(i => <Item item={i} key={i.id} />)
@@ -51,8 +51,8 @@ const Item = ({ item }) => {
 
   return (
     <div className="flex gap-4 mb-5">
-      <div className="w-24 aspect-square bg-white rounded-xl flex items-center justify-center shrink-0 border border-gray">
-        <img src={item.image} alt="" />
+      <div className="w-23 aspect-square bg-white rounded-xl flex items-center justify-center shrink-0 border border-gray">
+        <img src={item.image} alt="" className="max-h-full" />
       </div>
       <div className="relative grow">
         <p className="font-semibold text-black">{item.name}</p>
